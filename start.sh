@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo su
+
 rm -rf /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO
 rm -rf /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO
 mkdir /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO
