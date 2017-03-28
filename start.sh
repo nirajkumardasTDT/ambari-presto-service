@@ -18,7 +18,7 @@ mkdir /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO
 
 tar -xvf ambari-presto-1.2.tar.gz -C /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO
 mv /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO/ambari-presto-1.2/* /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO
-rm -rf /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO
+rm -rf /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO/ambari-presto-1.2
 
 #cp -R /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/
 
