@@ -3,6 +3,8 @@
 rm -rf /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO
 rm -rf /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO
 
+sudo apt-get -y install alien
+
 mkdir /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO
 
 cd /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO
