@@ -17,15 +17,20 @@ import os.path as path
 
 from resource_management.libraries.script.script import Script
 from resource_management.core.resources.system import Execute
-from common import PRESTO_RPM_URL, PRESTO_RPM_NAME, create_connectors, \
+from common import PRESTO_RPM_URL, PRESTO_TAR_URL, PRESTO_RPM_NAME, create_connectors, \
     delete_connectors
 
 
 class Worker(Script):
     def install(self, env):
         from params import java_home
-        Execute('wget --no-check-certificate {0} -O /tmp/{1}'.format(PRESTO_RPM_URL, PRESTO_RPM_NAME))
-        Execute('export JAVA8_HOME={0} && alien -i --scripts /tmp/{1}'.format(java_home, PRESTO_RPM_NAME))
+        #Execute('wget --no-check-certificate {0} -O /tmp/{1}'.format(PRESTO_RPM_URL, PRESTO_RPM_NAME))
+        Execute('wget --no-check-certificate {0}  -O /tmp/{1}'.format(PRESTO_TAR_URL, PRESTO_RPM_NAME))
+        Execute('tar xvfz /tmp/{0} -C /var/lib/presto'.format(PRESTO_RPM_NAME))
+        Execute('mv /var/lib/presto/{0} /var/lib/presto/'.format(PRESTO_RPM_NAME))
+        Execute('rm -rf /var/lib/presto/{0}'.format(PRESTO_RPM_NAME))
+
+        #Execute('export JAVA8_HOME={0} && alien -i --scripts /tmp/{1}'.format(java_home, PRESTO_RPM_NAME))
         self.configure(env)
 
     def stop(self, env):
