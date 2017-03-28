@@ -9,19 +9,19 @@ mkdir /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO
 
 cd /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO
 
-wget https://github.com/nirajkumardasTDT/ambari-presto-service/archive/ambari-presto-1.2.1.tar.gz
+wget https://github.com/nirajkumardasTDT/ambari-presto-service/archive/ambari-presto-1.2.2.ta1r.gz
 
-tar -xvf ambari-presto-1.2.1.tar.gz -C /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO
-mv /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO/ambari-presto-service-ambari-presto-1.2.1/* /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO
-rm -rf /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO/ambari-presto-service-ambari-presto-1.2.1
+tar -xvf ambari-presto-1.2.2.tar.gz -C /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO
+mv /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO/ambari-presto-service-ambari-presto-1.2.2/* /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO
+rm -rf /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO/ambari-presto-service-ambari-presto-1.2.2
 
 
 mkdir /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO
 cd /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO
-wget https://github.com/nirajkumardasTDT/ambari-presto-service/archive/ambari-presto-1.2.1.tar.gz
-tar -xvf ambari-presto-1.2.1.tar.gz -C /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO
-mv /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO/ambari-presto-service-ambari-presto-1.2.1/* /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO
-rm -rf /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO/ambari-presto-service-ambari-presto-1.2.1
+wget https://github.com/nirajkumardasTDT/ambari-presto-service/archive/ambari-presto-1.2.2.tar.gz
+tar -xvf ambari-presto-1.2.2.tar.gz -C /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO
+mv /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO/ambari-presto-service-ambari-presto-1.2.2/* /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO
+rm -rf /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/PRESTO/ambari-presto-service-ambari-presto-1.2.2
 
 #cp -R /var/lib/ambari-server/resources/stacks/HDP/2.5/services/PRESTO /var/lib/ambari-agent/cache/stacks/HDP/2.5/services/
 
